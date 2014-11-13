@@ -48,7 +48,10 @@ class Homestead
     # Install All The Configured Nginx Sites
     settings["sites"].each do |site|
       config.vm.provision "shell" do |s|
-          if (site.has_key?("hhvm") && site["hhvm"])
+          if (site.has_key?("symfony") && site["symfony"])
+            s.inline = "bash /vagrant/scripts/serve-symfony.sh $1 $2"
+            s.args = [site["map"], site["to"]]
+          elsif (site.has_key?("hhvm") && site["hhvm"])
             s.inline = "bash /vagrant/scripts/serve-hhvm.sh $1 $2"
             s.args = [site["map"], site["to"]]
           else
