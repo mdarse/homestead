@@ -1,5 +1,5 @@
-# Laravel Homestead
+# Homestead
 
-The official Laravel local development environment.
+A PHP local development environment.
 
-Official documentation [is located here](http://laravel.com/docs/homestead?version=4.2).
+Based on *Laravel Homestead*, documentation [is located here](http://laravel.com/docs/homestead?version=4.2).
