@@ -9,12 +9,13 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+    - map: ~/Code/awesome-symfony-app
+      to: /home/vagrant/awesome
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: awesome.dev
+      to: /home/vagrant/awesome/web
+      symfony: true
 
 variables:
     - key: APP_ENV
